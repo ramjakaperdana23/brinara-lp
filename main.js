@@ -119,6 +119,7 @@ var carousel = function () {
 };
 carousel();
 
+
     var counter = function () {
       $("#section-counter").waypoint(
         function (direction) {

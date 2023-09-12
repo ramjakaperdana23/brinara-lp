@@ -165,14 +165,40 @@ html {
   padding: 50px 0;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+}
+
+.big-font {
+  position: absolute;
+  font-weight: normal;
+  font-size: 72px;
+  margin-bottom: 0;
+  color: #dc3545;
+  line-height: 1;
+  margin-top: 0;
+  z-index: 1;
+  font-family: "Great Vibes", cursive;
+}
+.p-font {
+  font-family: "Great Vibes", cursive;
+  color: #383536;
 }
 .partner-brand {
   display: flex;
   flex-direction: row;
-  gap: 100px;
+  gap: 58px;
   mix-blend-mode: multiply;
+  width: 80%;
+}
+
+.partner-brand img {
+  filter: grayscale(100%);
+  transition: 0.25s all ease-in;
+}
+
+.partner-brand img:hover {
+  filter: grayscale(0%);
 }
 
 /* Resize images */
@@ -181,10 +207,57 @@ html {
   height: auto;
 }
 /* akhir Partner */
+/* Tentang kami */
+.wrapper-ttk {
+  height: 55vh;
+  /*This part is important for centering*/
+  display: grid;
+  place-items: flex-start;
+}
+
+.typing-demo {
+  width: 12ch;
+  animation: typing 5s steps(15), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+.typing-demo1 {
+  width: 15ch;
+  animation: typing 10s steps(25), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+.typing-demo2 {
+  width: 22ch;
+  animation: typing 5s steps(15), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+/* Tentang Kami  Akhir */
 
 /* Testimonial */
 .ftco-style {
-  margin-top: 7rem;
+  margin-top: -5rem;
 }
 .ftco-animate {
   opacity: 0;
@@ -237,143 +310,6 @@ html {
   line-height: 1.8;
   font-size: 18px;
 }
-
-/* testi 2 */
-/* .testimony-section {
-  position: relative;
-  z-index: 0;
-  background-position: center center !important;
-  position: relative;
-  background-attachment: fixed;
-}
-
-.testimony-section .img-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  content: "";
-}
-
-.testimony-section .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  content: "";
-  background: #000;
-  opacity: 0.7;
-}
-.testimony-section .owl-carousel {
-  margin: 0;
-}
-
-.testimony-section .owl-carousel .owl-stage-outer {
-  padding: 1.5em 0 2em 0;
-  position: relative;
-}
-.testimony-section .owl-nav {
-  position: absolute;
-  top: 100%;
-  width: 100%;
-}
-
-.testimony-section .owl-nav .owl-prev,
-.testimony-section .owl-nav .owl-next {
-  position: absolute;
-  transform: translateY(-50%);
-  margin-top: -10px;
-  outline: none !important;
-  transition: all 0.3s ease;
-  opacity: 0;
-}
-
-.testimony-section .owl-nav .owl-prev span::before,
-.testimony-section .owl-nav .owl-next span::before {
-  font-size: 30px;
-  color: rgba(0, 0, 0, 0.5);
-  transition: all 0.3s ease;
-}
-
-.testimony-section .owl-nav .owl-prev:hover span::before,
-.testimony-section .owl-nav .owl-prev:focus span::before,
-.testimony-section .owl-nav .owl-next:hover span::before,
-.testimony-section .owl-nav .owl-next:focus span::before {
-  color: #ffffff;
-}
-.testimony-section .owl-nav .owl-prev {
-  left: 50%;
-  margin-left: -80px;
-}
-.testimony-section .owl-nav .owl-next {
-  right: 50%;
-  margin-right: -80px;
-}
-
-.testimony-section .owl-dots {
-  text-align: center;
-}
-
-.testimony-section .owl-dots .owl-dot {
-  width: 10px;
-  height: 10px;
-  margin: 5px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.253);
-}
-
-.testimony-section .owl-dots .owl-dot.active {
-  background: #dc3545;
-}
-
-.testimony-wrap {
-  display: block;
-  position: relative;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 0 20px;
-  border-radius: 4px;
-  color: rgba(255, 255, 255, 0.7);
-  box-shadow: 0px 30px 33px -41px rgba(0, 0, 0, 0.24);
-}
-.testimony-wrap .text p {
-  font-style: italic;
-}
-
-.testimony-wrap .icon {
-  position: absolute;
-  top: -20px;
-  left: 20px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: #dc3545;
-}
-
-.testimony-wrap .icon span {
-  color: #ffffff;
-}
-
-.testimony-wrap .user-img {
-  width: 80px;
-  height: 80px;
-  position: relative;
-  border-radius: 50%;
-}
-
-.testimony-wrap .name {
-  font-weight: 400;
-  font-size: 20px;
-  margin-bottom: 0;
-  color: #ffffff;
-  font-style: normal !important;
-}
-
-.testimony-wrap .position {
-  font-size: 16px;
-  color: rgba(255, 255, 255, 0.7);
-} */
 
 /* testi 2 */
 .testimony-section {
@@ -653,6 +589,17 @@ html {
   object-fit: cover;
 }
 /* akhir form */
+/* Temukan Kami */
+.jdl-tmkk {
+  color: #dc3545;
+  font-family: "Great Vibes", cursive;
+  font-size-adjust: 0.8;
+}
+.my-map {
+  border-radius: 40%;
+}
+
+/* Akhir Temukan Kami */
 
 /* footer */
 .ftco-bg-dark {
