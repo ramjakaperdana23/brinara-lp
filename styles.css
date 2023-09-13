@@ -707,3 +707,23 @@ html {
   font-family: "Great Vibes", cursive;
   font-size: 24px;
 }
+
+@media (max-width: 1199px) {
+  .faq-box .h4-title {
+    padding: 16px 20px;
+  }
+  .faq-box p {
+    padding: 8px 20px 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .faq-row {
+    column-count: 1;
+    margin: 0;
+  }
+  .faq-box {
+    margin: 0;
+    margin-bottom: 30px;
+  }
+}
