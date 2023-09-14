@@ -727,3 +727,23 @@ html {
     margin-bottom: 30px;
   }
 }
+
+@media (max-width: 760px) {
+  .partner-brand {
+    flex-direction: column;
+    width: 39%;
+  }
+  .partner-wrapper {
+    justify-content: space-evenly;
+  }
+  .big-font {
+    position: relative;
+    font-size: 90px;
+  }
+  .p-font {
+    font-size: 40px;
+  }
+  .ftco-style {
+    text-align: center;
+  }
+}
