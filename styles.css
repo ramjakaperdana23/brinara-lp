@@ -634,6 +634,10 @@ html {
   z-index: -1;
 }
 
+.img-ico {
+  height: 35px;
+}
+
 .menu-tab ul li img {
   margin-right: 10px;
   position: relative;
